@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/shadow">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/clRepository"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/repositoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/big_repository_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLength="20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ownerAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_github_icon"
+            android:layout_marginTop="16dp"
+            app:riv_oval="true"
+            app:layout_constraintStart_toStartOf="@+id/ownerName"
+            app:layout_constraintEnd_toEndOf="@+id/ownerName"
+            app:layout_constraintTop_toBottomOf="@+id/repositoryName"/>
+
+        <TextView
+            android:id="@+id/ownerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="@string/owner_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLength="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ownerAvatar" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/ownerAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ownerAvatar"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description_goes_here"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="@+id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionLabel"/>
+
+        <TextView
+            android:id="@+id/languageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/programming_language"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language_goes_here"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/languageLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/languageLabel"
+            app:layout_constraintTop_toTopOf="@id/languageLabel"/>
+
+        <TextView
+            android:id="@+id/forksLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fork_label"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@+id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@id/language" />
+
+        <TextView
+            android:id="@+id/forks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fork_goes_here"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/forksLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/forksLabel"
+            app:layout_constraintTop_toTopOf="@id/forksLabel"/>
+
+
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text="@string/last_update"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@id/forks" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_goes_here"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/dateLabel"
+            app:layout_constraintBottom_toBottomOf="@+id/dateLabel"
+            app:layout_constraintTop_toTopOf="@id/dateLabel"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>
+
